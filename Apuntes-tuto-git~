@@ -1,4 +1,3 @@
-
 /*Comando para crear repositorios en Git */
 
 git init -- para iniciar el git.  
@@ -12,10 +11,10 @@ git status -- Mostra el estado actual de los directorios de trabajos.
 git diff -- Muestra la diferencia los que no estan estegin index
 git log -- Muestra toda la informacionn. 
 git show Muestra los metadatos.
-git reset head nombreArchivo  --Marcar el archivo para que no sea incliudo en el proximo commit 
-git reset --soft head --Desase el commit y conserba los cambiar el area locar
-git reset --hard head --Restablce el arbol de area local con el ultimo commit 
-git clean  --limipiar 
+git reset head nombreArchivo  --Marcar el archivo para que no sea incliudo en el proximo comin 
+git reset --soft head --Desase el comit y conserba los cambiar el area locar
+git reset --hard head --Restablce el arbol de area local con el ultiomo comit 
+git clear --limipiar 
 
 /* Comandos para Ramas */
 
@@ -32,6 +31,6 @@ git push origin --Subir todos los ramas del repositorio.
 git push origin "NombreRama" --Subir los cambios realizados a solo esa rama.
 git clone link --Clonar un repositorio de githup.
 git remote -v --muestra los fetch y el pull para actualizar los archivos locales.
-git fetch  --Actuliza los commit de mi repositorio local.
+git fetch  --Actuliza los commit de mi repositorio local.\
 git pull origin --Actualiza el repositorio local.
 
