@@ -10,7 +10,12 @@ git rm [archivo] - Para la eliminacion de los diferentes archivos.
 git mv origen Destino -Para renombrar o   mover un archivo.
 git status -- Mostra el estado actual de los directorios de trabajos.
 git diff -- Muestra la diferencia los que no estan estegin index
-git log -- Muestra toda la informacionn. 
+git log -- Muestra toda la informacionn.
+git log -n 1 --Nos muestra el primer commit o depende del numero de que quereamos.
+git log -oneline -- Resumen de todos los commit que existen.
+git log -stat -- Que archivos se an cambiado y el numero de lineas que a se añadido o cambiado de cada archivo.
+git log --author="NOMBRE-DEL-AUTOR" --Muestra los commit echos por esa persona.
+git log --decorte  añade los nombre de las ramas o de las etiquetas.
 git show Muestra los metadatos.
 git reset head nombreArchivo  --Marcar el archivo para que no sea incliudo en el proximo commit 
 git reset --soft head --Desase el commit y conserba los cambiar el area locar
