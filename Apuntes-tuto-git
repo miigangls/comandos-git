@@ -1,4 +1,3 @@
-
 /*Comando para crear repositorios en Git */
 
 git init -- para iniciar el git.  
@@ -39,4 +38,8 @@ git clone link --Clonar un repositorio de githup.
 git remote -v --muestra los fetch y el pull para actualizar los archivos locales.
 git fetch  --Actuliza los commit de mi repositorio local.
 git pull origin --Actualiza el repositorio local.
+
+/* Creacion de un Hosting con gitHup  */
+
+git branch gh-page -- se crea una rama con ese nombre para que gitHup lo crea como un hosting
 
