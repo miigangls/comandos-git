@@ -1,44 +1,87 @@
-/*Comando para crear repositorios en Git */
+📘 Guía de Comandos Básicos de Git
+🧱 Creación y manejo de repositorios
+# Inicializar un repositorio local
+git init
 
-git init -- para iniciar el git.  
-git clone direccion URL -- Para clonar el directiorio.
-git add  NombreArchivo [] --se gerenra captura o añade un archivo o directorio.
-git commit --	 -m "Mensaje" es para todos archivos ya modificados.
-		-am "Mensaje" + "Archivo" Es para cambiar el Archivo con la carpeta.
-git rm [archivo] - Para la eliminacion de los diferentes archivos.
-git mv origen Destino -Para renombrar o   mover un archivo.
-git status -- Mostra el estado actual de los directorios de trabajos.
-git diff -- Muestra la diferencia los que no estan estegin index
-git log -- Muestra toda la informacionn.
-git log -n 1 --Nos muestra el primer commit o depende del numero de que quereamos.
-git log -oneline -- Resumen de todos los commit que existen.
-git log -stat -- Que archivos se han cambiado y el numero de lineas que a se añadido o cambiado de cada archivo.
-git log --author="NOMBRE-DEL-AUTOR" --Muestra los commit echos por esa persona.
-git log --decorte  añade los nombre de las ramas o de las etiquetas.
-git show Muestra los metadatos.
-git reset head nombreArchivo  --Marcar el archivo para que no sea incliudo en el proximo commit 
-git reset --soft head --Desase el commit y conserva los cambios el area local
-git reset --hard head --Restablce el arbol de area local con el ultimo commit 
-git clean  --limipiar 
+# Clonar un repositorio remoto
+git clone <URL>
 
-/* Comandos para Ramas */
+# Añadir archivos o directorios al área de preparación (staging)
+git add <NombreArchivo> [<OtroArchivo>]
 
-git branch  --Muestra todas las ramas que exiten en el momento.
-git branch "NombreRama"  --Creacion de una Rama.
-git checkout "NombreRama" --Posiciona la rama.
-git checkout -b "NombreRama" -- Creacion una rama y lo posiciona en la rama.
-git meter "NombreRama" -- Combinar dos ramas en una sola rama. 
+# Confirmar los cambios
+git commit -m "Mensaje del commit"
+git commit -am "Mensaje"   # Añade y confirma archivos modificados directamente
+
+# Eliminar archivos del repositorio
+git rm <archivo>
+
+# Mover o renombrar archivos
+git mv <origen> <destino>
+
+# Mostrar el estado actual del repositorio
+git status
+
+# Ver diferencias entre archivos no indexados
+git diff
+
+# Ver el historial de commits
+git log
+git log -n 1             # Muestra solo el último commit
+git log --oneline        # Resumen corto de commits
+git log --stat           # Archivos modificados y líneas añadidas/eliminadas
+git log --author="Nombre" # Commits de un autor específico
+git log --decorate       # Muestra ramas y etiquetas asociadas
+
+# Mostrar los detalles de un commit específico
+git show
+
+# Resetear archivos o commits
+git reset HEAD <archivo>      # Quita un archivo del área de staging
+git reset --soft HEAD         # Deshace el último commit, mantiene los cambios
+git reset --hard HEAD         # Restaura el estado del último commit (pierdes cambios)
+
+# Limpiar archivos no rastreados
+git clean -f
+
+🌿 Manejo de ramas
+# Mostrar todas las ramas
+git branch
+
+# Crear una nueva rama
+git branch <NombreRama>
+
+# Cambiar de rama
+git checkout <NombreRama>
+
+# Crear y moverse a una nueva rama
+git checkout -b <NombreRama>
+
+# Combinar ramas (merge)
+git merge <NombreRama>
+
+🚀 Subir repositorios a GitHub
+# Subir todas las ramas al repositorio remoto
+git push origin --all
+
+# Subir una rama específica
+git push origin <NombreRama>
+
+# Clonar un repositorio de GitHub
+git clone <link>
+
+# Mostrar los orígenes remotos configurados
+git remote -v
+
+# Actualizar los commits del repositorio remoto sin fusionar
+git fetch
+
+# Descargar y fusionar los cambios del remoto
+git pull origin <NombreRama>
+
+🌐 Crear hosting con GitHub Pages
+# Crear una rama especial para hosting en GitHub Pages
+git branch gh-pages
 
 
-/* Subir los repositorios a githup */
-
-git push origin --Subir todos los ramas del repositorio.
-git push origin "NombreRama" --Subir los cambios realizados a solo esa rama.
-git clone link --Clonar un repositorio de githup.
-git remote -v --muestra los fetch y el pull para actualizar los archivos locales.
-git fetch  --Actuliza los commit de mi repositorio local.
-git pull origin --Actualiza el repositorio local.
-
-/* Creacion de un Hosting con gitHup  */
-
-git branch gh-page -- se crea una rama con ese nombre para que gitHup lo crea como un hosting
+⚡ Nota: GitHub reconoce automáticamente la rama gh-pages para publicar sitios web estáticos.
